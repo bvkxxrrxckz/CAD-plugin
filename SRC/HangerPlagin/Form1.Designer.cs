@@ -42,11 +42,12 @@ namespace HangerPlagin
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(64, 213);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -57,22 +58,23 @@ namespace HangerPlagin
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.MistyRose;
+            this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(12, 23);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(127, 20);
             this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "фыв";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.TextChanged += new System.EventHandler(this.TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.AnyTextBox_Enter);
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.MistyRose;
+            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.textBox2.Location = new System.Drawing.Point(12, 62);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(127, 20);
             this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "-5000";
+            this.textBox2.TextChanged += new System.EventHandler(this.TextChanged);
+            this.textBox2.Enter += new System.EventHandler(this.AnyTextBox_Enter);
             // 
             // textBox3
             // 
@@ -80,6 +82,8 @@ namespace HangerPlagin
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(127, 20);
             this.textBox3.TabIndex = 3;
+            this.textBox3.TextChanged += new System.EventHandler(this.TextChanged);
+            this.textBox3.Enter += new System.EventHandler(this.AnyTextBox_Enter);
             // 
             // textBox4
             // 
@@ -87,6 +91,8 @@ namespace HangerPlagin
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(127, 20);
             this.textBox4.TabIndex = 4;
+            this.textBox4.TextChanged += new System.EventHandler(this.TextChanged);
+            this.textBox4.Enter += new System.EventHandler(this.AnyTextBox_Enter);
             // 
             // textBox5
             // 
@@ -94,6 +100,8 @@ namespace HangerPlagin
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(127, 20);
             this.textBox5.TabIndex = 5;
+            this.textBox5.TextChanged += new System.EventHandler(this.TextChanged);
+            this.textBox5.Enter += new System.EventHandler(this.AnyTextBox_Enter);
             // 
             // label1
             // 
@@ -140,11 +148,22 @@ namespace HangerPlagin
             this.label5.TabIndex = 10;
             this.label5.Text = "Глубина полки G:";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HangerPlagin.Properties.Resources.pic;
+            this.pictureBox1.Location = new System.Drawing.Point(145, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(362, 356);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 11;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(150, 243);
+            this.ClientSize = new System.Drawing.Size(520, 378);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -156,8 +175,12 @@ namespace HangerPlagin
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Создатель вешалки";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +200,7 @@ namespace HangerPlagin
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
